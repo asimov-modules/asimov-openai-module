@@ -1,0 +1,21 @@
+# See: https://asimov-specs.github.io/module-manifest/
+name: openai
+label: OpenAI
+title: ASIMOV OpenAI Module
+summary: LLM inference powered by OpenAI
+links:
+  - https://github.com/asimov-modules/asimov-openai-module
+  - https://crates.io/crates/asimov-openai-module
+provides:
+  programs:
+    - asimov-openai-prompter
+config:
+  variables:
+    - name: api-key
+      environment: OPENAI_API_KEY
+    - name: endpoint
+      environment: OPENAI_API_ENDPOINT
+      default: https://api.openai.com
+    - name: model
+      environment: OPENAI_MODEL
+      default: gpt-5-mini
