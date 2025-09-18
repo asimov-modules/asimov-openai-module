@@ -20,18 +20,21 @@ pub struct Options {
     #[builder(default = "gpt-5-mini")]
     pub model: String,
 
-    #[builder(default = 1024)]
-    pub max_tokens: usize,
+    pub max_tokens: Option<usize>,
 
     #[builder(into)]
     pub api_key: SecretString,
 }
 
 pub fn generate(input: impl AsRef<str>, options: &Options) -> Result<Vec<String>, Box<dyn Error>> {
-    let req = json!({
+    let mut req = json!({
         "model": options.model,
         "input": input.as_ref(),
     });
+
+    if let Some(max_tokens) = options.max_tokens {
+        req["max_output_tokens"] = max_tokens.into();
+    }
 
     let mut resp = ureq::Agent::config_builder()
         .http_status_as_error(false)
