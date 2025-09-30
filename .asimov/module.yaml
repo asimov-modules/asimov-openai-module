@@ -2,7 +2,7 @@
 name: openai
 label: OpenAI
 title: ASIMOV OpenAI Module
-summary: LLM inference powered by OpenAI
+summary: LLM inference powered by OpenAI.
 links:
   - https://github.com/asimov-modules/asimov-openai-module
   - https://crates.io/crates/asimov-openai-module
