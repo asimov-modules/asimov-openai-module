@@ -13,10 +13,10 @@ provides:
 config:
   variables:
     - name: api-key
-      environment: OPENAI_API_KEY
+      environment: ASIMOV_OPENAI_API_KEY
     - name: endpoint
-      environment: OPENAI_API_ENDPOINT
+      environment: ASIMOV_OPENAI_API_ENDPOINT
       default: https://api.openai.com
     - name: model
-      environment: OPENAI_MODEL
+      environment: ASIMOV_OPENAI_MODEL
       default: gpt-5-mini

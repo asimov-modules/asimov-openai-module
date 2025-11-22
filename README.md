@@ -45,15 +45,15 @@ asimov module config openai
 Or through environment variables
 
 ```bash
-export OPENAI_API_KEY="..."
+export ASIMOV_OPENAI_API_KEY="..."
 ```
 
 ### Optional configuration
 
-| Name       | Environment Variable  | Default                  |
-| ---------- | --------------------- | ------------------------ |
-| `endpoint` | `OPENAI_API_ENDPOINT` | `https://api.openai.com` |
-| `model`    | `OPENAI_MODEL`        | `gpt-5-mini`             |
+| Name       | Environment Variable         | Default                  |
+| ---------- | ---------------------------- | ------------------------ |
+| `endpoint` | `ASIMOV_OPENAI_API_ENDPOINT` | `https://api.openai.com` |
+| `model`    | `ASIMOV_OPENAI_MODEL`        | `gpt-5-mini`             |
 
 ### Use a custom endpoint such as [Exo](https://github.com/exo-explore/exo)
 
@@ -68,8 +68,8 @@ Enter value for `model` (optional, default: `gpt-5-mini`)
 > llama-3.2-3b
 
 $ # or:
-$ export OPENAI_API_ENDPOINT="http://localhost:52415"
-$ export OPENAI_MODEL="llama-3.2-3b"
+$ export ASIMOV_OPENAI_API_ENDPOINT="http://localhost:52415"
+$ export ASIMOV_OPENAI_MODEL="llama-3.2-3b"
 
 $ # then:
 $ echo "Why is the sky blue?" | asimov-openai-prompter
