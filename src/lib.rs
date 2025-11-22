@@ -36,7 +36,7 @@ pub fn generate(input: impl AsRef<str>, options: &Options) -> Result<Vec<String>
     });
 
     if let Some(max_tokens) = options.max_tokens {
-        req["max_output_tokens"] = max_tokens.into();
+        req["max_completion_tokens"] = max_tokens.into();
     }
 
     let mut resp = ureq::Agent::config_builder()
