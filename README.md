@@ -31,7 +31,7 @@ cargo install asimov-openai-module
 ## 👉 Examples
 
 ```bash
-asimov-openai-prompter
+echo "Why is the sky blue?" | asimov-openai-prompter
 ```
 
 ## ⚙ Configuration
@@ -60,8 +60,8 @@ export OPENAI_API_KEY="..."
 ```console
 $ # either:
 $ asimov module config openai
-Enter value for `api-key`
-> doesntmatter
+Enter value for `api-key` (required)
+>
 Enter value for `endpoint` (optional, default: `https://api.openai.com`)
 > http://localhost:52415
 Enter value for `model` (optional, default: `gpt-5-mini`)
