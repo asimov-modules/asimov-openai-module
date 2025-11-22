@@ -59,13 +59,8 @@ export ASIMOV_OPENAI_API_KEY="..."
 
 ```console
 $ # either:
-$ asimov module config openai
-Enter value for `api-key` (required)
->
-Enter value for `endpoint` (optional, default: `https://api.openai.com`)
-> http://localhost:52415
-Enter value for `model` (optional, default: `gpt-5-mini`)
-> llama-3.2-3b
+$ asimov module config openai endpoint http://localhost:52415
+$ asimov module config openai model llama-3.2-3b
 
 $ # or:
 $ export ASIMOV_OPENAI_API_ENDPOINT="http://localhost:52415"
